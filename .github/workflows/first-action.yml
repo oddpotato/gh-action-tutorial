@@ -15,6 +15,11 @@ jobs:
     # These are the steps that will run when 'first job' is triggered
     # You can have multiple steps but they will all be on the same indentation
     steps:
+    #####
+    # FROM THE SUPPLEMENTARY MATERIALS ---
+    # If you need to run multiple shell commands (or multi-line commands, e.g., for readability), you can easily do so by adding the pipe symbol 
+    #(|) as a value after the run: key.
+    #####
       # Again you can name it whatever you want
       - name: Print greeting
       # Below is the script you are going to run
