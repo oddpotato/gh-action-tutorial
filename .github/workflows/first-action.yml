@@ -1,0 +1,23 @@
+# This is the name of the action and it should always be the first thing you define with the key 'name'
+name: First Workflow
+# This key defines what events trigger the action
+# workflow_dispatch means that you can manually start the workflow
+on: workflow_dispatch
+# 'jobs' defines what work you're going to do - must be plural, not singular
+jobs:
+  # Here you name the job indented - whatever you call it is on you
+  first-job:
+    # The second part also has to be intented. Such is the joy of yml
+    # This is the 'runner' in which the steps should be executed
+    # Here's documentation - https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
+    # Grabbing the latest ubuntu to run on GitHub
+    runs-on: ubuntu-latest
+    # These are the steps that will run when 'first job' is triggered
+    # You can have multiple steps but they will all be on the same indentation
+    steps:
+      # Again you can name it whatever you want
+      - name: Print greeting
+      # Below is the script you are going to run
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
